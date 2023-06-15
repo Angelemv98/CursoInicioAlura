@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+
+    var inicioDeSesionRegistrado = "Angel";
+    var contrasenhaRegistrada = "Angel123";
+    let inicio = false
+    let intentos = 3
+    for(let i =1; i<=intentos;){
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        inicio=true
+        break
+    } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo, te quedan "+(intentos-i)+" intento(s)");
+        i++
+    }
+    }
+    if(inicio==true){
+        document.write("<h2>Hello World!</h2>")
+    }
+    if(inicio==false){
+        document.write("<h1>ACCESO DENEGADO</h1>")
+    }
+</script>

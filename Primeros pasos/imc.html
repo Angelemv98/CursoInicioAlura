@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>IMC</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif" >
+    <h1>Calculadora IMC</h1>
+    <script>
+        function imprimir(msj){
+            document.write(msj)
+            salto()
+        }
+        function salto(){
+            document.write("<br>".repeat(2))
+        }
+        function calcIMC(peso,altura){
+            return imc = peso/(altura * altura) 
+
+        }
+        let peso = prompt("Ingresa el peso");
+        let altura = prompt("Ingresa la altura en decimal");
+        let CalculodeIMC = calcIMC(peso,altura)
+        imprimir("El IMC calculado es "+ CalculodeIMC)
+
+
+        if(CalculodeIMC<=18.5) {
+        imprimir("Tienes insuficiencia ponderal")}
+
+        if(CalculodeIMC>18.5 && calcIMC<24.9) {
+        imprimir("Estas normal")}
+
+        if(CalculodeIMC>25 && calcIMC<29.9) {
+        imprimir("Tienes sobrepeso")}
+
+        if(CalculodeIMC>=30) {
+        imprimir("Estas obeso")}
+
+
+
+    </script>
+</body>
+</html>

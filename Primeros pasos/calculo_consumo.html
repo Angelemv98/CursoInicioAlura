@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculo_consumo</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <h3>Alcohol o Gasolina (?)</h3>
+    <script>
+      document.write("<h3>Gasolina</h3>");
+      let tanque = 40;
+      let recorrido = 480;
+      let eficiencia = recorrido / tanque;
+      document.write(
+        "Cuál es la eficiencia del carro usando gasolina? " +
+          eficiencia +
+          "Km/L"
+      );
+      document.write("<h3>Alcohol</h3>");
+      recorrido = 300;
+      eficiencia = recorrido / tanque;
+      document.write(
+        "Cuál es la eficiencia del carro usando alcohol? " + eficiencia + "Km/L"
+      );
+    </script>
+  </body>
+</html>

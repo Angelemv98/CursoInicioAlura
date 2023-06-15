@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>No se que sera ajaja que crazy</title>
+  </head>
+  <body>
+    <canvas width="600" height="400"> </canvas>
+    <script>
+      let pantalla = document.querySelector("canvas");
+      let pincel = pantalla.getContext("2d");
+      pincel.fillStyle = "lightgray";
+      pincel.fillRect(0, 0, 600, 400);
+
+      function alerta(evento){
+        let x = evento.pageX- pantalla.offsetLeft;
+        let y = evento.pageY - pantalla.offsetTop;
+          alert("Haz hecho un clic en "+x+", "+y)
+      }
+
+      function dibujarCirculo(evento){
+        let x = evento.pageX- pantalla.offsetLeft;
+        let y = evento.pageY - pantalla.offsetTop;
+
+        pincel.fillStyle = "red";
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2*3.14);
+        pincel.fill();
+    
+    }
+
+      pantalla.onclick = dibujarCirculo
+    </script>
+  </body>
+</html>

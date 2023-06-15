@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Futbol</title>
+  </head>
+  <h1>Puntos de futbol</h1>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <script>
+      function imprimir(msj) {
+        document.write(msj);
+        salto();
+      }
+      function salto() {
+        document.write("<br>".repeat(2));
+      }
+
+      let victorias = parseInt(prompt("Cuantas victorias tuvo el equipo"));
+      let empates = parseInt(prompt("Cuantos empates tuvo el equipo"));
+      
+      let puntostotales = (victorias) * 3 + empates;
+
+      imprimir("El total de puntos es " + puntostotales);
+
+
+      if(puntostotales>28)      imprimir("El equipo esta mejor que el año pasado ")
+
+      if(puntostotales<28)      imprimir("El equipo esta peor que el año pasado ")
+
+      if(puntostotales==28)       imprimir("El equipo esta igual que el año pasado ")
+
+
+    </script>
+  </body>
+</html>

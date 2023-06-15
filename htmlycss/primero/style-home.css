@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.caja {
+  width: 940px;
+  position: relative;
+  margin: 0 auto;
+}
+
+header {
+  padding: 20px 0;
+  background-color: #bbbbbb;
+}
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+nav {
+  position: absolute;
+  top: 110px;
+  right: 50px;
+}
+nav a {
+  text-transform: capitalize;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-transform: capitalize;
+  color: rgb(180, 177, 1);
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: underline;
+}
+#banner {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+em strong {
+    color: red;
+}
+
+.principal {
+    padding: 10px;
+    background-color: #cccccc;
+    border-radius: 5px;
+}
+
+.diferenciales {
+    padding: 15px;
+}
+
+.tituloCentro {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#mision {
+    font-weight: bold;
+    font-size: 20px;
+}
+.tituloDif{
+    font-weight: bold;
+    top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.items {
+    font-style: italic;
+}
+
+.ulDif {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imgDif {
+  width: 50%;
+} 
+
+footer{
+    text-align: center;
+    background: url(img/bg.jpg);
+    padding: 40px;
+}
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+}

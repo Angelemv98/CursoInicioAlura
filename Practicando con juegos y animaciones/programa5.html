@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas width="600" height="400"> </canvas>
+    <script>
+      let pantalla = document.querySelector("canvas");
+      let pincel = pantalla.getContext("2d");
+      pincel.fillStyle = "lightgray";
+      pincel.fillRect(0, 0, 600, 400);
+      let xAlt = 0;
+      let yAlt = 0;
+      radio = 10;
+
+      function dibujarBlanco(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
+        pincel.fill();
+      }
+
+      function limpiarPantalla() {
+        pincel.clearRect(0, 0, 600, 400);
+      }
+
+      var x = 0;
+      function actPantalla() {
+        limpiarPantalla();
+        xAlt = noAleatorio(600);
+        yAlt = noAleatorio(400);
+        posicionarObj(xAlt, yAlt);
+        x++
+      }
+
+      function posicionarObj(x, y) {
+        dibujarBlanco(x, y, radio + 20, "red");
+        dibujarBlanco(x, y, radio + 10, "white");
+        dibujarBlanco(x, y, radio, "red");
+      }
+
+      function noAleatorio(Max) {
+        return Math.floor(Math.random() * Max);
+      }
+      setInterval(actPantalla, 1000);
+
+      function disparar(evento) {
+        var xpres = evento.pageX - pantalla.offsetLeft;
+        var ypres = evento.pageY - pantalla.offsetTop;
+        if (
+          (xpres < xAlt + radio) &&
+          (xpres > xAlt - radio) &&
+          (ypres > yAlt + radio) &&
+          (ypres > yAlt - radio)
+        ) {
+          alert("Tiro certero");
+        }
+      }
+      pantalla.onclick = disparar;
+    </script>
+  </body>
+</html>

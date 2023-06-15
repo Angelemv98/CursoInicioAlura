@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Segundo Programa que crazy</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif" >
+    <!-- <h1>Con HTML</h1><br>
+    La edad de Angel es... <br> ? -->
+
+    <script>
+      function saltos(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+      }
+      function alerta(mensaje){
+        alert(mensaje)
+      }
+      
+      alerta("Que pex");
+      let anioAct = new Date().getFullYear();
+      let edadAng = anioAct - 1998;
+      let edadTan = anioAct - 1997;
+      let edadDer = anioAct - 1996;
+      let promedio = (edadAng + edadTan + edadDer) / 3;
+      document.write("La edad de Angel es... " + edadAng + " años");
+      saltos();
+      document.write("La edad de Tania es... " + edadTan + " años");
+      saltos();
+      document.write("La edad de Derian es... " + edadDer + " años");
+      saltos();
+      document.write("El promedio de la edad de las personas son... " + Math.round(promedio));
+    </script>
+  </body>
+</html>

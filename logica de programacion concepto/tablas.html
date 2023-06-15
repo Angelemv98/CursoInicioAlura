@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular tablas</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif;">
+    <h1>Calcular tablas</h1>
+    <script>
+      function imprimir(msj) {
+        document.write(msj);
+        salto();
+      }
+      function salto() {
+        document.write("<br>".repeat(2));
+      }
+
+      let numeroAMulti = parseInt(prompt("Ingresa el numero que quieres que se muestre la tabla"));
+
+      imprimir("Con while")
+      let cont = 1
+      while(cont <=10){
+        imprimir("El numero "+ numeroAMulti+" por "+cont+ " = "+(numeroAMulti*cont))
+        cont +=1 
+      }
+
+      imprimir("Con FOR")
+      for(let i =1; i<=10; i++){
+        imprimir("El numero "+ numeroAMulti+" por "+i+ " = "+(numeroAMulti*i))
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculo diferencia edades</title>
+</head>
+<body>
+    <script>
+        var edad1 = 25
+        var edad2 = 30
+        var diferencia = Math.abs(edad1-edad2) // Math.abs es para obtener el numero sin signo, obtener el numero absoluto
+        function escribir(msj){
+            document.write(msj)
+        }
+        function salto(){
+            document.write("<br>")
+        }
+        escribir("La edad de la persona1 es... "+ edad1)
+        salto()
+        escribir("La edad de la persona2 es... "+ edad2)
+        salto()
+        escribir("La diferencia de edades es... "+diferencia)
+    </script>
+</body>
+</html>
